@@ -1,0 +1,92 @@
+@use '../abstracts/variables' as v;
+
+body, h1, h2, h3, h4, p, a {
+    color: v.$primary-color;
+    font-family: v.$font-family;
+
+}
+
+.basic-text {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 10px 0px 10px 0px;
+
+}
+
+.basic-text-contact {
+    @extend .basic-text;
+    font-size: 15px;
+}
+
+.heading {
+    font-size: 60px;
+    font-weight: v.$heading-font-weight;
+}
+
+.purple-text {
+    color: v.$secondary-color;
+}
+
+.purple-text-pe {
+    @extend .purple-text;
+}
+
+.purple-text-contact {
+    color: v.$secondary-color;
+    font-size: 40px;
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+
+.highlighted-text {
+    font-weight: bold;
+}
+
+.copyright-text {
+    text-align: center;
+    font-size: 12px;
+    margin: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .heading {
+        font-size: 90px;
+    }
+
+    .basic-text {
+        font-size: 14px;
+    }
+
+
+    .purple-text-contact {
+        font-size: 45px;
+    }
+
+    .basic-text-contact {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .purple-text-pe {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .heading {
+        font-size: 150px;
+    }
+
+    .basic-text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+
+
+}
