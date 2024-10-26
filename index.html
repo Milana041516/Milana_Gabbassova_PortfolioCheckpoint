@@ -1,11 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
+
 <body>
+    <h1 class="hidden">Portfolio</h1>
+    <header class="grid-con">
+        <nav class="m-col-span-full navbar">
+            <h2 class="hidden">Header</h2>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+                <img class="logo-tablet" src="images/logo-mobile.svg" alt="fanshawe-logo">
+            
+
+
+                <div class="nav-menu">
+                <ul>
+                    <li class="nav-item">
+                        <a data-link="home" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-link="about-me" class="nav-link">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-link="projects" class="nav-link">PROJECTS</a>
+                    </li>
+
+                    <li class="contact-mobile nav-item">
+                        <a data-link="contact" class="nav-link">CONTACT ME</a>
+                    </li>
+
+                   
+                </ul>
+                </div>
+
+                <div class="contact-tablet">
+                    <a data-link="contact" class="nav-link">CONTACT ME</a>
+                </div>
+        </nav>
+
+        
+        <div class="logo-mobile col-start-2 col-end-4">
+            <img src="images/logo-mobile.svg" alt="fanshawe-logo">
+        </div>
+    </header>
+
+    <main>
+        <section class="grid-con section-intro">
+            <h2 class="hidden">Landing Page</h2>
+            <div class="col-span-full m-col-start-1 m-col-end-7 text-intro-main">
+                <p>Hi, I am Milana, <span class="purple-text">&lt;Front-end Developer&gt;</span></p>
+                <p class="basic-text t-intro">I'm a front-end developer focused on building clean, responsive websites that seamlessly integrate 3D elements for enhanced interaction and visual depth. Check out my work to see how I combine coding and creativity to create engaging digital experiences.</p>
+            </div>
+
+            <div class="col-span-full m-col-start-7 m-col-end-13">
+            <video class="player" controls preload="metadata" poster="images/placeholder.jpg">
+                <source src="video/video.mp4" type="video/mp4">
+                <source src="video/video.webm" type="video/webm">
+                <p>Ooops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
+            </video>
+        </div>
+        </section>
+
+        <section class="grid-con section-about">
+            <h2 class="hidden">About Me</h2>
+            <div class="h-background-about"><img src="images/tape2.svg" alt="background-about"></div>
+            <div class="col-span-full heading"><p>ABOUT ME</p></div>
+
+            <div class="facts-about col-span-full m-col-start-1 m-col-end-8">
+                <p class="big-text-about">&lt;FACTS ABOUT ME&gt;</p>
+                <p class="basic-text">I'm a <span class="purple-text">front-end enthusiast passionate</span> about building responsive, user-friendly websites with modern technologies, and I love incorporating <span class="purple-text">3D elements</span> into web projects to create visually dynamic experiences. As a recent graduate of the <span class="purple-text">Interactive Media Design program</span> at Fanshawe College, I honed my skills in web development and 3D design. When I'm not coding, I enjoy experimenting with digital art and exploring the latest design trends. I'm <span class="purple-text">always learning</span> and diving into new tools and technologies to keep my work <span class="purple-text">fresh and innovative.</span></p>
+            </div>
+
+            <div class="skills-about col-span-full m-col-start-8 m-col-end-13">
+                <p class="big-text-about">&lt;SKILLS/TOOLS&gt;</p>
+                <img src="images/skills.svg" alt="skills">
+            </div>
+
+        </section>
+
+        <section class="grid-con section-projects">
+            <h2 class="hidden">Projects</h2>
+            <div class="h-background-projects"><img src="images/ball.svg" alt="background-projects"></div>
+            <div class="col-span-full heading h-projects-background"><p>PROJECTS</p></div>
+
+            <div class="col-span-full container-projects">
+                <div class="scroll">
+                    <div class="right-to-left">
+                        <p>WEB DEVELOPMENT WEB DEVELOPMENT WEB DEVELOPMENT WEB DEVELOPMENT WEB DEVELOPMENT WEB DEVELOPMENT WEB DEVELOPMENT WEB DEVELOPMENT WEB DEVELOPMENT</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--web dev-->
+
+            <div class="col-span-full project-cards">
+            <div class="project-card">
+                <div class="project-card-image"></div>
+                <div class="project-card-tools">
+                    <p class="tool">TOOL 1</p>
+                    <p class="tool">TOOL 2</p>
+                    <p class="tool">TOOL 3</p>
+                </div>
+                <div class="project-card-name">Project name</div>
+                <div class="project-card-buttons">
+                    <div class="white-button">VIEW PROJECT</div>
+                    <div class="black-button">VIEW DETAILS</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-image"></div>
+                <div class="project-card-tools">
+                    <p class="tool">TOOL 1</p>
+                    <p class="tool">TOOL 2</p>
+                    <p class="tool">TOOL 3</p>
+                </div>
+                <div class="project-card-name">Project name</div>
+                <div class="project-card-buttons">
+                    <div class="white-button">VIEW PROJECT</div>
+                    <div class="black-button">VIEW DETAILS</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-image"></div>
+                <div class="project-card-tools">
+                    <p class="tool">TOOL 1</p>
+                    <p class="tool">TOOL 2</p>
+                    <p class="tool">TOOL 3</p>
+                </div>
+                <div class="project-card-name">Project name</div>
+                <div class="project-card-buttons">
+                    <div class="white-button">VIEW PROJECT</div>
+                    <div class="black-button">VIEW DETAILS</div>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-span-full all-projects-button">ALL PROJECTS -> </div>
+
+            <div class="col-span-full container-projects">
+                <div class="scroll">
+                    <div class="right-to-left">
+                        <p>3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN 3D MOTION DESIGN</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--3d-->
+
+            <div class="col-span-full project-cards">
+                <div class="project-card">
+                    <div class="project-card-image"></div>
+                    <div class="project-card-tools">
+                        <p class="tool">TOOL 1</p>
+                        <p class="tool">TOOL 2</p>
+                        <p class="tool">TOOL 3</p>
+                    </div>
+                    <div class="project-card-name">Project name</div>
+                    <div class="project-card-buttons">
+                        <div class="white-button">VIEW PROJECT</div>
+                        <div class="black-button">VIEW DETAILS</div>
+                    </div>
+                </div>
     
+                <div class="project-card">
+                    <div class="project-card-image"></div>
+                    <div class="project-card-tools">
+                        <p class="tool">TOOL 1</p>
+                        <p class="tool">TOOL 2</p>
+                        <p class="tool">TOOL 3</p>
+                    </div>
+                    <div class="project-card-name">Project name</div>
+                    <div class="project-card-buttons">
+                        <div class="white-button">VIEW PROJECT</div>
+                        <div class="black-button">VIEW DETAILS</div>
+                    </div>
+                </div>
+    
+                <div class="project-card">
+                    <div class="project-card-image"></div>
+                    <div class="project-card-tools">
+                        <p class="tool">TOOL 1</p>
+                        <p class="tool">TOOL 2</p>
+                        <p class="tool">TOOL 3</p>
+                    </div>
+                    <div class="project-card-name">Project name</div>
+                    <div class="project-card-buttons">
+                        <div class="white-button">VIEW PROJECT</div>
+                        <div class="black-button">VIEW DETAILS</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-full all-projects-button">ALL PROJECTS -> </div>
+
+        </section>
+
+        <section class="grid-con section-testimonials">
+            <h2 class="hidden">Testimonials</h2>
+            <div class="h-background-testimonials">
+                <img src="images/tape1.svg" alt="background-testimonials"></div>
+            <div class="col-span-full heading"><p>TESTIMONIALS</p></div>
+
+            <div class="col-span-full testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p class="testimonial-name">NAME SURNAME </p>
+                    <p class="testimonial-occupation">OCCUPATION</p>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p class="testimonial-name">NAME SURNAME </p>
+                    <p class="testimonial-occupation">OCCUPATION</p>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p class="testimonial-name">NAME SURNAME </p>
+                    <p class="testimonial-occupation">OCCUPATION</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p class="testimonial-name">NAME SURNAME </p>
+                    <p class="testimonial-occupation">OCCUPATION</p>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p class="testimonial-name">NAME SURNAME </p>
+                    <p class="testimonial-occupation">OCCUPATION</p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="grid-con section-contact">
+            <h2 class="hidden">Contact me</h2>
+            <div class="h-background-contact"><img src="images/tape2.svg" alt="background-contact"></div>
+            <div class="col-span-full heading"><p>CONTACT ME</p></div>
+
+            <div class="text-contact col-span-full l-col-start-1 l-col-end-6">
+                <p class="purple-text-contact">&lt;Let's Collaborate&gt;</p>
+                <p class="basic-text-contact">As a <span class="highlighted-text">front-end developer</span> with a passion for integrating <span class="highlighted-text">3D design</span>, I'm always excited to take on new challenges. Whether you're looking to bring your ideas to life on the web or enhance your digital experience, <span class="highlighted-text">feel free to reach out</span>—let's create something <span class="highlighted-text">innovative</span> together.</p>
+           </div>
+
+            <div class="col-span-full phone-email-contact">
+                <div class="phone">
+                    <img src="images/phone-icon.svg" alt="phone-icon">
+                    <p class="purple-text-pe">&lt;+1 (548) 881 4541&gt;</p>
+                </div>
+
+                <div class="email">
+                    <img src="images/mail-icon.svg" alt="mail-icon">
+                    <p class="purple-text-pe">&lt;milana15.10.05@gmail.com&gt;</p>
+                </div>
+            </div>
+
+        <div class="form-contact col-span-full l-col-start-6 l-col-end-13">
+            <form class="col-span-full order-form-inputs">
+                <input type="text" placeholder="First name" id="fname">
+                <input type="text" placeholder="Last name" id="lname">
+                <input type="text" placeholder="Email" id="email">
+                <textarea name="msg" placeholder="Message" id="message"></textarea>
+            </form>
+
+            <div class="col-span-full button-social">
+                <button class="submit-button" id="submit-action">SUBMIT</button>
+
+                <div class="social-medias">
+                    <img src="images/instagram.svg" alt="instagram">
+                    <img src="images/github.svg" alt="github">
+                    <img src="images/linkedin.svg" alt="linkedin">
+                    <img src="images/behance.svg" alt="behance">
+                </div>
+            </div>
+        </div>
+           
+        </section>
+
+        <div class="ball-blur"></div>
+
+    </main>
+
+    
+    
+    <footer class="grid-con section-footer">
+        <h2 class="hidden">Footer</h2>
+        <div class="col-span-full logo-footer"><img src="images/logo-mobile.svg" alt="logo-footer"></div>
+        <div class="col-span-full nav-menu-footer">
+            <ul>
+                <li class="nav-item-footer">
+                    <a data-link="home" class="nav-link-footer">HOME</a>
+                </li>
+                <li class="nav-item-footer">
+                    <a data-link="about-me" class="nav-link-footer">ABOUT ME</a>
+                </li>
+                <li class="nav-item-footer">
+                    <a data-link="projects" class="nav-link-footer">PROJECTS</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-span-full contact-social-footer">
+
+            <div class="button-footer black-button">CONTACT ME</div>
+
+            <div class="social-medias-footer">
+                <img src="images/instagram.svg" alt="instagram">
+                <img src="images/github.svg" alt="github">
+                <img src="images/linkedin.svg" alt="linkedin">
+                <img src="images/behance.svg" alt="behance">
+            </div>
+
+        </div>
+
+            <div class="col-span-full"><p class="copyright-text">© 2024 Milana Gabbassova</p></div>
+     </footer>
+     
+    
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
