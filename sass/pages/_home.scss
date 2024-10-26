@@ -242,13 +242,13 @@ section {
     
     
     :root {
-            --plyr-audio-progress-buffered-background: red;
-            --plyr-color-main: linear-gradient(to right, #FF0939, #961414, #660D0D);
-            --plyr-control-icon-size: 15px;
-            --plyr-control-radius: 20px;
-            --plyr-font-family: Helvetica, Arial, sans-serif;
-            --plyr-control-spacing: 15px;
-            --plyr-range-fill-background: #FF0939;
+        --plyr-audio-progress-buffered-background: #6933B3;
+        --plyr-color-main: linear-gradient(to right, #6933B3, #4A2C89, #2A1B4D);
+        --plyr-control-icon-size: 15px;
+        --plyr-control-radius: 20px;
+        --plyr-font-family: Helvetica, Arial, sans-serif;
+        --plyr-control-spacing: 15px;
+        --plyr-range-fill-background: #6933B3;
     }
 
     .section-about {
