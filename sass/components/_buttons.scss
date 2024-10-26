@@ -1,0 +1,77 @@
+.white-button {
+    background-color: white; 
+    color: #09060C;
+    width: 145px;
+    height: 40px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.submit-button {
+    @extend .white-button;
+    height: 50px;
+    width: 220px;
+    font-weight: bold;
+}
+
+.black-button {
+    @extend .white-button;
+    backdrop-filter: blur(20px);
+    background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+    color: white;
+    border: 1px solid white;
+}
+
+.all-projects-button {
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: #09060C;
+    font-size: 25px;
+    padding: 15px 75px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.2),  
+    0 0 20px rgba(255, 255, 255, 0.15), 
+    inset 0 0 5px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .white-button {
+        width: 95px;
+        height: 30px;
+        padding: 8px 0px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 11px;
+        cursor: pointer;
+    }
+
+    .submit-button {
+        height: 50px;
+        width: 400px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .white-button {
+        width: 145px;
+        height: 35px;
+        padding: 10px 0px;
+        font-size: 13px;
+    }
+
+    .submit-button {
+        height: 60px;
+        width: 200px;
+        font-size: 30px;
+    }
+
+}

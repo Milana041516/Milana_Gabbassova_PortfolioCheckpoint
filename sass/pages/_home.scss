@@ -1,7 +1,403 @@
-#about-us {
-    margin-bottom: 20px;
+@use '../abstracts/variables' as v;
+
+section {
+    overflow: hidden;
 }
 
-#founders section {
-    margin-bottom: 40px;
+.section-intro {
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+    margin-bottom: 30px;
+
+    .text-intro-main {
+        font-size: 50px;
+    }
+
+    .t-intro {
+        opacity: 0.8;
+    }
+
+
 }
+
+:root {
+    --plyr-audio-progress-buffered-background: red;
+    --plyr-color-main: linear-gradient(to right, #FF0939, #961414, #660D0D);
+    --plyr-control-icon-size: 15px;
+    --plyr-control-radius: 20px;
+    --plyr-font-family: Helvetica, Arial, sans-serif;
+    --plyr-control-spacing: 15px;
+    --plyr-range-fill-background: #FF0939;
+}
+
+.section-about {
+    position: relative;
+    padding: 20px;
+
+    .facts-about {
+        margin: 20px 0px;
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 1px solid white;
+        padding: 15px;
+    }
+
+    .h-background-about {
+        position: absolute;
+        top: -15px;
+
+        img {
+            width: 100%;
+        }
+        
+    }
+
+
+    .big-text-about {
+        font-size: 16px;
+    }
+
+    .skills-about {
+        margin: 20px 0px;
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 1px solid white;
+        padding: 15px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+.section-projects {
+    padding: 20px;
+    position: relative;
+    margin-bottom: 50px;
+
+    .h-background-projects {
+        position: absolute;
+        top: 0;
+        mix-blend-mode: difference;
+    }
+    
+    .project-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-projects {
+        display: flex;
+        align-items: center;
+        margin: 50px 0 0 0;
+        overflow: hidden;
+    }
+
+    .scroll {
+        white-space: nowrap;
+    }
+
+    .scroll div {
+        display: flex;
+    }
+
+    .scroll p {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .right-to-left {
+        animation: RightToLeft 10s infinite linear;
+    }
+
+    @keyframes RightToLeft {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.section-testimonials {
+    margin-top: 20px;
+    position: relative;
+    padding: 20px;
+
+    .h-background-testimonials {
+        position: absolute;
+        top: -100px;
+        left: -170px;
+    }
+}
+
+.section-contact {
+    position: relative;
+    padding: 20px;
+    margin-top: 50px;
+
+    .h-background-contact {
+        position: absolute;
+        top: -40px;
+    }
+
+    .order-form-inputs {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .order-form-inputs input {
+        border: 1px solid white;
+        border-radius: 20px;
+        margin: 10px 0px 16px 0px;
+        padding: 24px 22px;
+        font-size: 18px;
+        width: 100%;
+        height: 68px;
+        background: transparent;
+        box-sizing: border-box;
+        outline: none;
+        color: white;
+    }
+
+    .order-form-inputs textarea {
+        border: 1px solid white;
+        font-family: 'Inter', sans-serif;
+        border-radius: 15px;
+        margin: 10px 0px 16px 0px;
+        padding: 24px 22px;
+        font-size: 18px;
+        width: 100%;
+        height: 250px;
+        background: transparent;
+        box-sizing: border-box;
+        outline: none;
+        color: white;
+        resize: none;
+    }
+    
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .button-social {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-medias img {
+        width: 45px;
+        cursor: pointer;
+    }
+
+    .phone-email-contact div {
+        margin: 20px 0;
+    }
+
+    .phone-email-contact div img{
+        width: 40px;
+    }
+
+
+    .phone, .email {
+        display: flex;
+        gap: 20px;
+        text-align: center;
+    }
+
+    
+
+}
+
+.ball-blur {
+    position: absolute;
+    left: 50px;
+    width: 270px;
+    height: 300px;
+    transform: rotate(-35deg);
+    border-radius: 304.147px;
+    background: linear-gradient(180deg, rgba(145, 77, 255, 0.10) 0%, rgba(65, 145, 204, 0.10) 100%);filter: blur(40px);
+    z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+
+    .plyr-container {
+        width: 100%; 
+        max-width: 400px; 
+        aspect-ratio: 1 / 1; 
+        overflow: hidden; 
+        margin: auto;
+    }
+    
+    .plyr {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    :root {
+            --plyr-audio-progress-buffered-background: red;
+            --plyr-color-main: linear-gradient(to right, #FF0939, #961414, #660D0D);
+            --plyr-control-icon-size: 15px;
+            --plyr-control-radius: 20px;
+            --plyr-font-family: Helvetica, Arial, sans-serif;
+            --plyr-control-spacing: 15px;
+            --plyr-range-fill-background: #FF0939;
+    }
+
+    .section-about {
+    
+        .h-background-about {
+            top: -50px;
+            left: -80px;
+        }
+    
+        .big-text-about {
+            font-size: 20px;
+        }
+    }
+
+    .section-projects {
+        .project-cards {
+            max-width: 768px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px; 
+            overflow: hidden; 
+            padding: 10px; 
+        }
+
+        .scroll p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    
+    .section-testimonials {
+        margin: 0 auto;
+    
+        .h-background-testimonials {
+            top: -70px;
+
+             img {
+                width: 60%;
+             }
+        }
+    }
+
+    .section-contact {
+    
+        .h-background-contact {
+            top: -80px;
+            left: -50px;
+        }
+
+        .text-contact {
+            margin-top: 20px;
+        }
+
+        .phone-email-contact {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .phone, .email {
+            align-items: center;
+        }
+      
+        .social-medias img {
+            width: 55px;
+        }
+    
+    }
+
+    .ball-blur {
+        width: 270px;
+        height: 130px;
+        left: 30%;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .section-intro {
+    
+        .text-intro-main {
+            font-size: 75px;
+        }
+    }
+
+    .section-about {
+    
+        .big-text-about {
+            font-size: 28px;
+        }
+
+        .facts-about {
+            padding: 25px;
+        }
+    }
+
+    .section-projects {
+    
+        .h-background-projects {
+            left: -30px;
+            img {
+                width: 300px;
+            }
+        }
+
+        .project-cards {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px; 
+            overflow: hidden; 
+            padding: 10px; 
+        }
+
+        .container-projects {
+            margin: 90px 0 0 0;
+        }
+    
+    
+        .scroll p {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+
+    .section-contact {
+    
+
+        .phone-email-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .text-contact {
+            margin-top: 55px;
+            line-height: 40px;
+        }
+
+        .form-contact {
+            margin-top: -440px;
+        }
+
+        .order-form-inputs textarea {
+            height: 200px;
+        }
+    
+    }
+}
+
+
