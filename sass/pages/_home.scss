@@ -89,38 +89,6 @@ section {
         flex-direction: column;
     }
 
-    .container-projects {
-        display: flex;
-        align-items: center;
-        margin: 50px 0 0 0;
-        overflow: hidden;
-    }
-
-    .scroll {
-        white-space: nowrap;
-    }
-
-    .scroll div {
-        display: flex;
-    }
-
-    .scroll p {
-        font-size: 13px;
-        font-weight: bold;
-    }
-
-    .right-to-left {
-        animation: RightToLeft 10s infinite linear;
-    }
-
-    @keyframes RightToLeft {
-        from {
-            transform: translateX(0%);
-        }
-        to {
-            transform: translateX(-50%);
-        }
-    }
 }
 
 .section-testimonials {
