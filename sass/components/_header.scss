@@ -1,5 +1,3 @@
-
-
 .navbar {
     min-height: 70px;
     display: flex;
@@ -62,22 +60,37 @@
     width: 100%;
 
     a {
-        text-align: left;
-        display: block;
+        position: relative;
+        text-align: center;
+        display: inline-block;
         margin-top: 25px;
-        padding: 0px 0px;
+        padding: 0px;
         color: white;
         text-decoration: none;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: transform 0.3s ease-in-out;
+            transform-origin: center;
+        }
+    
+        &:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
     }
 
-    a:hover {
-        color: #6933B3;
-        cursor: pointer;
     }
-    }
+ 
 
    .nav-menu.active {
     left: 0;
@@ -85,7 +98,6 @@
 
    .nav-link {
     transition: 0.7s ease;
-    text-align: center;
    }   
 
    
@@ -121,6 +133,8 @@
 
         .nav-menu {
             position: relative;
+            display: flex;
+            justify-content: center;
             left: 0;
             background: transparent; 
             align-items: center;
@@ -128,6 +142,7 @@
 
             ul {
                 display: flex;
+                gap: 50px;
             }
         }
         
@@ -140,7 +155,6 @@
 
             a {
                 margin: 0 auto;
-                display: block;
                 text-decoration: none;
                 font-size: 13px;
                 font-weight: normal;
@@ -148,15 +162,6 @@
                 align-items: center; 
                 text-wrap: nowrap;
             }
-        }
-
-        .nav-item:nth-child(1) {
-            margin-left: 50px;
-            margin-right: -110px;
-        }
-
-        .nav-item:nth-child(3) {
-            margin-left: -90px;
         }
         
         .contact-mobile {
@@ -204,14 +209,6 @@
         }
     }
 
-    .nav-item:nth-child(1) {
-        margin-left: 180px;
-        margin-right: -230px;
-    }
-
-    .nav-item:nth-child(3) {
-        margin-left: -200px;
-    }
 
     .logo-tablet {
         padding: 20px 20px 20px 0;
