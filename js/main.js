@@ -12,60 +12,88 @@ hamburger.addEventListener("click", () => {
 
 
 //slider 
-const galleryContainer = document.querySelector('.gallery-container');
-const galleryControlsContainer = document.querySelector('.gallery-controls');
-const galleryControls = ['previous', 'next'];
-const galleryItems = document.querySelectorAll('.project-card');
+const container = document.querySelector('#carousel-container');
+const prevBtn = document.querySelector('.slider-prev');
+const nextBtn = document.querySelector('.slider-next');
 
-class Carousel {
-    constructor(container, items, controls) {
-        this.carouselContainer = container;
-        this.carouselControls = controls;
-        this.carouselArray = [...items];
+// Guard clause to prevent errors if container is not found
+if (!container) {
+  console.error('Carousel container not found');
+} else {
+  let currentIndex = 0;
+  
+
+  
+
+  const cards = document.querySelectorAll('.project-card');
+  const totalCards = cards.length;
+
+  function updateCarousel() {
+    cards.forEach((card, index) => {
+      const offset = (index - currentIndex + totalCards) % totalCards;
+      const zIndex = offset === 2 ? 2 : 0;
+      const scale = offset === 2 ? 1.2 : 0.7;
+      const opacity = offset === 2 ? 1 : 0.5;
+
+      card.style.transform = `
+        translateX(${(offset - 2) * 100}%) 
+        translateZ(${offset === 2 ? '50px' : '-100px'}) 
+        scale(${scale})
+      `;
+      card.style.opacity = opacity;
+      card.style.zIndex = zIndex;
+    });
+  }
+
+  // Event listeners for navigation
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalCards;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    updateCarousel();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      currentIndex = (currentIndex + 1) % totalCards;
+      updateCarousel();
+    } else if (e.key === 'ArrowLeft') {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      updateCarousel();
     }
+  });
 
-    updateGallery() {
-        this.carouselArray.forEach(card => {
-            card.classList.remove('project-card-1');
-            card.classList.remove('project-card-2');
-            card.classList.remove('project-card-3');
-            card.classList.remove('project-card-4');
-            card.classList.remove('project-card-5');
-        });
+  // Touch events for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-        this.carouselArray.slice(0.5).forEach((card, i) => {
-            card.classList.add(`project-card-${i+1}`);
-        })
+  container.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  container.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const swipeLength = touchEndX - touchStartX;
+
+    if (Math.abs(swipeLength) > swipeThreshold) {
+      if (swipeLength > 0) {
+        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      } else {
+        currentIndex = (currentIndex + 1) % totalCards;
+      }
+      updateCarousel();
     }
+  }
 
-    setCurrentState(direction) {
-        if (direction.className == "gallery-controls-previous") {
-            this.carouselArray.unshift(this.carouselArray.pop());
-        }else {
-            this.carouselArray.push(this.carouselArray.shift());
-        }
-        this.updateGallery(); 
-    }
-
-    setControls() {
-        this.carouselControls.forEach(control => {
-            galleryControlsContainer.appendChild(document.createElement('button')).className = `.gallery-controls-${control}`;
-            document.querySelector(`.gallery-controls-${control}`).innerText = control;
-        })
-    }
-
-    useControls() {
-        const triggers = [...galleryControlsContainer.childNodes];
-        triggers.forEach(control => {
-            control.addEventListener('click', e => {
-                e.preventDefault();
-                this.setCurrentState(control);
-            })
-        })
-    }
+  // Initialize carousel
+  updateCarousel();
 }
-
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-
-exampleCarousel.setControls();
-exampleCarousel.useControls();

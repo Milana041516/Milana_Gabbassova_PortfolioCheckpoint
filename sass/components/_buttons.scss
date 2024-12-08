@@ -25,6 +25,11 @@
     border: 1px solid white;
 }
 
+.white-button:hover, .black-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
 .all-projects-button {
     width: 100%;
     height: 60px;
@@ -43,8 +48,7 @@
 }
 
 .view-website-button {
-    @extend .all-projects-button
-    
+    @extend .all-projects-button;
 }
 
 @media screen and (min-width: 768px) {

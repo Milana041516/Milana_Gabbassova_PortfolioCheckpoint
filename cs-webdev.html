@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Case Study</title>
+    <title>Case Study Web Development</title>
     <link rel="icon" href="images/logo-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
@@ -104,85 +104,116 @@
 
         <section class="grid-con casestudy-section-slider">
             <h2 class="hidden">Slider with project cards</h2>
-            <div class="gallery col-span-full">
-            <div class="col-span-full gallery-container">
+            <div class="slider-wrapper col-span-full">
+                <div id="carousel-container" class="relative">
+                    <button class="slider-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                      </button>
+                          <div class="project-card" data-index=1>
+                            <div class="project-card-image"></div>
+                            <div class="project-card-tools">
+                              <p class="tool">TOOL 1</p>
+                              <p class="tool">TOOL 2</p>
+                              <p class="tool">TOOL 3</p>
+                            </div>
+                            <h2 class="project-card-name">Name</h2>
+                            <div class="project-card-buttons">
+                              <div class="white-button">VIEW PROJECT</div>
+                              <div class="black-button">VIEW DETAILS</div>
+                            </div>
+                      </div>
+                      
 
-                <div class="project-card project-card-1" data-index="1">
-                    <div class="project-card-image"></div>
-                    <div class="project-card-tools">
-                        <p class="tool">TOOL 1</p>
-                        <p class="tool">TOOL 2</p>
-                        <p class="tool">TOOL 3</p>
+                    <div class="project-card project-card-1" data-index="1">
+                        <div class="project-card-image"></div>
+                        <div class="project-card-tools">
+                            <p class="tool">TOOL 1</p>
+                            <p class="tool">TOOL 2</p>
+                            <p class="tool">TOOL 3</p>
+                        </div>
+                        <div class="project-card-name">Project name</div>
+                        <div class="project-card-buttons">
+                            <div class="white-button">VIEW PROJECT</div>
+                            <div class="black-button">VIEW DETAILS</div>
+                        </div>
                     </div>
-                    <div class="project-card-name">Project name</div>
-                    <div class="project-card-buttons">
-                        <div class="white-button">VIEW PROJECT</div>
-                        <div class="black-button">VIEW DETAILS</div>
+
+                    <div class="project-card project-card-1" data-index="1">
+                        <div class="project-card-image"></div>
+                        <div class="project-card-tools">
+                            <p class="tool">TOOL 1</p>
+                            <p class="tool">TOOL 2</p>
+                            <p class="tool">TOOL 3</p>
+                        </div>
+                        <div class="project-card-name">Project name</div>
+                        <div class="project-card-buttons">
+                            <div class="white-button">VIEW PROJECT</div>
+                            <div class="black-button">VIEW DETAILS</div>
+                        </div>
                     </div>
+
+                    <div class="project-card project-card-1" data-index="1">
+                        <div class="project-card-image"></div>
+                        <div class="project-card-tools">
+                            <p class="tool">TOOL 1</p>
+                            <p class="tool">TOOL 2</p>
+                            <p class="tool">TOOL 3</p>
+                        </div>
+                        <div class="project-card-name">Project name</div>
+                        <div class="project-card-buttons">
+                            <div class="white-button">VIEW PROJECT</div>
+                            <div class="black-button">VIEW DETAILS</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-card-1" data-index="1">
+                        <div class="project-card-image"></div>
+                        <div class="project-card-tools">
+                            <p class="tool">TOOL 1</p>
+                            <p class="tool">TOOL 2</p>
+                            <p class="tool">TOOL 3</p>
+                        </div>
+                        <div class="project-card-name">Project name</div>
+                        <div class="project-card-buttons">
+                            <div class="white-button">VIEW PROJECT</div>
+                            <div class="black-button">VIEW DETAILS</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-card-1" data-index="1">
+                        <div class="project-card-image"></div>
+                        <div class="project-card-tools">
+                            <p class="tool">TOOL 1</p>
+                            <p class="tool">TOOL 2</p>
+                            <p class="tool">TOOL 3</p>
+                        </div>
+                        <div class="project-card-name">Project name</div>
+                        <div class="project-card-buttons">
+                            <div class="white-button">VIEW PROJECT</div>
+                            <div class="black-button">VIEW DETAILS</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-card-1" data-index="1">
+                        <div class="project-card-image"></div>
+                        <div class="project-card-tools">
+                            <p class="tool">TOOL 1</p>
+                            <p class="tool">TOOL 2</p>
+                            <p class="tool">TOOL 3</p>
+                        </div>
+                        <div class="project-card-name">Project name</div>
+                        <div class="project-card-buttons">
+                            <div class="white-button">VIEW PROJECT</div>
+                            <div class="black-button">VIEW DETAILS</div>
+                        </div>
+                    </div>
+
+                    <button class="slider-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                      </button>
                 </div>
+              </div>
 
-                <div class="project-card project-card-2" data-index="2">
-                    <div class="project-card-image"></div>
-                    <div class="project-card-tools">
-                        <p class="tool">TOOL 1</p>
-                        <p class="tool">TOOL 2</p>
-                        <p class="tool">TOOL 3</p>
-                    </div>
-                    <div class="project-card-name">Project name</div>
-                    <div class="project-card-buttons">
-                        <div class="white-button">VIEW PROJECT</div>
-                        <div class="black-button">VIEW DETAILS</div>
-                    </div>
-                </div>
-
-                <div class="project-card project-card-3" data-index="3">
-                    <div class="project-card-image"></div>
-                    <div class="project-card-tools">
-                        <p class="tool">TOOL 1</p>
-                        <p class="tool">TOOL 2</p>
-                        <p class="tool">TOOL 3</p>
-                    </div>
-                    <div class="project-card-name">Project name</div>
-                    <div class="project-card-buttons">
-                        <div class="white-button">VIEW PROJECT</div>
-                        <div class="black-button">VIEW DETAILS</div>
-                    </div>
-                </div>
-
-                <div class="project-card project-card-4" data-index="4">
-                    <div class="project-card-image"></div>
-                    <div class="project-card-tools">
-                        <p class="tool">TOOL 1</p>
-                        <p class="tool">TOOL 2</p>
-                        <p class="tool">TOOL 3</p>
-                    </div>
-                    <div class="project-card-name">Project name</div>
-                    <div class="project-card-buttons">
-                        <div class="white-button">VIEW PROJECT</div>
-                        <div class="black-button">VIEW DETAILS</div>
-                    </div>
-                </div>
-
-                <div class="project-card project-card-5" data-index="5">
-                    <div class="project-card-image"></div>
-                    <div class="project-card-tools">
-                        <p class="tool">TOOL 1</p>
-                        <p class="tool">TOOL 2</p>
-                        <p class="tool">TOOL 3</p>
-                    </div>
-                    <div class="project-card-name">Project name</div>
-                    <div class="project-card-buttons">
-                        <div class="white-button">VIEW PROJECT</div>
-                        <div class="black-button">VIEW DETAILS</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-controls col-span-full">
-                <img class="gallery-controls-previous" src="images/arrow-left.svg" alt="arrow left">
-                <img class="gallery-controls-next" src="images/arrow-right.svg" alt="arrow right">
-            </div>
-        </div>
         </section>
 
         
