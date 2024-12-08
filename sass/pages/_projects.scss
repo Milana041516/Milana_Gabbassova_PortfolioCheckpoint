@@ -1,0 +1,209 @@
+.projects-section-intro {
+    video {
+        max-width: 90%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+}
+
+
+.projects-section-projectcards {
+
+    padding: 0 25px;
+
+    .filter-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 30px 0px;
+
+        .filter-button {
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    }
+
+.projects-project {
+    margin-bottom: 30px;
+
+    .project-info-tools, .project-mini-description {
+        display: none;
+    }
+
+    .project-image {
+        
+    img {
+        width: 100%;
+        border-radius: 20px;  
+        text-align: center;
+    }
+ }
+        
+    .project-info {
+        display: flex;
+        flex-direction: column;
+
+        .project-info-name {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0px 20px 10px;
+            text-align: left;
+
+        }
+
+        .project-card-buttons {
+            display: flex;
+            justify-content: space-between;
+
+            .white-button, .black-button {
+                width: 45%;
+            }
+        }
+    }
+}
+
+.black-button {
+    width: 100%;
+}
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .projects-section-projectcards {
+    
+        .filter-buttons {
+            gap: 20px;
+            justify-content: left;
+    
+            .filter-button {
+                font-size: 20px;
+            }
+        }
+    
+    .projects-project {
+
+        display: flex;
+        gap: 20px;
+    
+        .project-image {
+            width: 100%;
+     }
+            
+        .project-info {
+
+            .project-info-name {
+                font-size: 40px;
+                font-weight: bold;
+                margin: 10px 0px 10px 0px;
+                text-align: left;
+    
+            }
+
+            .project-info-tools {
+                display: flex;
+                gap: 10px;
+                margin: 0px 0px 10px 0px;
+
+                p {
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    padding: 5px;
+                    font-size: 15px;
+                }
+            }
+
+            .project-mini-description {
+                display: block;
+                margin: 10px 0px;
+                font-size: 15px;
+            }
+    
+            .project-card-buttons {
+                display: flex;
+                justify-content: space-between;
+    
+                .white-button, .black-button {
+                    width: 48%;
+                }
+            }
+        }
+    }
+    
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .projects-section-projectcards {
+    
+        .filter-buttons {
+            gap: 30px;
+            justify-content: left;
+    
+            .filter-button {
+                font-size: 25px;
+            }
+        }
+    
+    .projects-project {
+
+        display: flex;
+        gap: 20px;
+    
+        .project-image {
+            width: 50%;
+     }
+            
+        .project-info {
+
+            .project-info-name {
+                font-size: 60px;
+                margin: 10px 0px 10px 0px;
+    
+            }
+
+            .project-info-tools {
+                display: flex;
+                gap: 10px;
+                margin: 0px 0px 10px 0px;
+
+                p {
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    padding: 5px;
+                    font-size: 20px;
+                }
+            }
+
+            .project-mini-description {
+                margin: 10px 0px;
+                font-size: 20px;
+            }
+    
+            .project-card-buttons {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+    
+                .white-button, .black-button {
+                    width: 48%;
+                    height: 50px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .black-button {
+        width: 48%;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    }
+
+   
+}
