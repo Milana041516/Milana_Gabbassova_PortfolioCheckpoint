@@ -10,58 +10,62 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 })
 
-//I don't think that I need it!!!!!!
-// document.querySelectorAll('.nav-link').forEach(n => n.addEventListener("click", () => {
-//     hamburger.classList.remove("active");
-//     navMenu.classList.remove("active");
-// }))
 
+//slider 
+const galleryContainer = document.querySelector('.gallery-container');
+const galleryControlsContainer = document.querySelector('.gallery-controls');
+const galleryControls = ['previous', 'next'];
+const galleryItems = document.querySelectorAll('.project-card');
 
-//contact-form 
-const fname = document.getElementById("fname");
-const lname = document.getElementById("lname");
-const email = document.getElementById("email");
-const message = document.getElementById("message");
-const inputs = [fname, lname, email, message];
+class Carousel {
+    constructor(container, items, controls) {
+        this.carouselContainer = container;
+        this.carouselControls = controls;
+        this.carouselArray = [...items];
+    }
 
-
-function validateInputs() {
-    let hasError = false;
-    
-    inputs.forEach(item => {
-        if (!item.value.trim()) {
-            item.style.borderColor = "red";
-            hasError = true;
-        } else {
-            item.style.borderColor = ""; 
-        }
-    });
-
-    return hasError;
-}
-
-
-document.getElementById("submit-action").onclick = function () {
-    const hasError = validateInputs();
-
-   
-    if (!hasError) {
-        inputs.forEach(item => {
-            item.value = "";
+    updateGallery() {
+        this.carouselArray.forEach(card => {
+            card.classList.remove('project-card-1');
+            card.classList.remove('project-card-2');
+            card.classList.remove('project-card-3');
+            card.classList.remove('project-card-4');
+            card.classList.remove('project-card-5');
         });
 
-        alert("We'll get in touch soon!");
+        this.carouselArray.slice(0.5).forEach((card, i) => {
+            card.classList.add(`project-card-${i+1}`);
+        })
     }
-};
 
-
-inputs.forEach(item => {
-    item.addEventListener("input", function() {
-        if (!item.value.trim()) {
-            item.style.borderColor = "red"; 
-        } else {
-            item.style.borderColor = ""; 
+    setCurrentState(direction) {
+        if (direction.className == "gallery-controls-previous") {
+            this.carouselArray.unshift(this.carouselArray.pop());
+        }else {
+            this.carouselArray.push(this.carouselArray.shift());
         }
-    });
-});
+        this.updateGallery(); 
+    }
 
+    setControls() {
+        this.carouselControls.forEach(control => {
+            galleryControlsContainer.appendChild(document.createElement('button')).className = `.gallery-controls-${control}`;
+            document.querySelector(`.gallery-controls-${control}`).innerText = control;
+        })
+    }
+
+    useControls() {
+        const triggers = [...galleryControlsContainer.childNodes];
+        triggers.forEach(control => {
+            control.addEventListener('click', e => {
+                e.preventDefault();
+                this.setCurrentState(control);
+            })
+        })
+    }
+}
+
+const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+
+exampleCarousel.setControls();
+exampleCarousel.useControls();
