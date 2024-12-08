@@ -1,0 +1,283 @@
+.skills-tablet-desktop {
+    display: none;
+}
+
+.about-section-intro {
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+    margin-bottom: 30px;
+
+    .text-intro-main {
+        font-size: 49px;
+        text-align: center;
+    }
+
+    .t-intro {
+        font-size: 18px;
+        font-weight: 200;
+        opacity: 0.5;
+        line-height: 25px;
+    }
+
+}
+
+.about-section-info {
+    .info-about {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+        .big-text-about{
+            text-align: center;
+            font-size: 27px;
+        }
+
+        .basic-text {
+            font-size: 17px;
+            line-height: 25px;
+        }
+    }
+
+    .info-picture {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+        .big-text-about{
+            text-align: center;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .info-socials {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+
+        .big-text-about{
+            text-align: center;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .social-medias {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    .info-education {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+        .big-text-about{
+            text-align: center;
+            font-size: 27px;
+        }
+
+        .basic-text {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    .info-location {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+        .big-text-about{
+            text-align: center;
+            font-size: 27px;
+        }
+
+        .basic-text {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    .info-why-frontend {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+        .big-text-about{
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .basic-text {
+            font-size: 17px;
+            line-height: 25px;
+        }
+    }
+
+    .info-skills {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+        .big-text-about{
+            text-align: center;
+            font-size: 27px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .skills-mobile {
+        display: none;
+    }
+
+    .skills-tablet-desktop {
+        display: block;
+    }
+
+    .about-section-intro {
+    
+        .text-intro-main {
+            font-size: 50px;
+        }
+    
+        .t-intro {
+            font-size: 18px;
+            font-weight: 200;
+            opacity: 0.5;
+            line-height: 25px;
+        }
+    
+    }
+
+    .info-picture {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .about-section-intro {
+    
+        .text-intro-main {
+            font-size: 70px;
+        }
+    
+        .t-intro {
+            font-size: 20px;
+            font-weight: 200;
+            opacity: 0.5;
+            line-height: 25px;
+            padding: 0px 100px;
+        }
+    
+    }
+
+    .info-picture {
+        height: 500px;
+    }
+
+
+    .about-section-info {
+        .info-about {
+    
+            .big-text-about{
+                font-size: 48px;
+            }
+    
+            .basic-text {
+                font-size: 25px;
+                line-height: 40px;
+                padding: 10px 30px;
+            }
+        }
+    
+        .info-picture {
+    
+            .big-text-about{
+                font-size: 48px;
+            }
+        }
+    
+        .info-socials {
+    
+            .big-text-about{
+                font-size: 48px;
+            }
+        }
+    
+        .info-education {
+            .big-text-about{
+                font-size: 48px;
+            }
+    
+            .basic-text {
+                font-size: 25px;
+            }
+        }
+    
+        .info-location {
+    
+            .big-text-about{
+                font-size: 48px;
+            }
+    
+            .basic-text {
+                font-size: 25px;
+            }
+        }
+    
+        .info-why-frontend {
+    
+            .big-text-about{
+                font-size: 48px;
+            }
+    
+            .basic-text {
+                font-size: 25px;
+                line-height: 40px;
+            }
+        }
+    
+        .info-skills {
+    
+            .big-text-about{
+                font-size: 48px;
+            }
+        }
+    }
+}
