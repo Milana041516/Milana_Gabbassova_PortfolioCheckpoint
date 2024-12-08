@@ -1,0 +1,83 @@
+.casestudy-section-intro {
+    .intro-title {
+        text-align: center;
+        font-size: 30px;
+        margin: 20px 0px;
+    }
+}
+
+.casestudy-section-overview-text {
+    .text-info-cs {
+        backdrop-filter: blur(20px);
+        background: radial-gradient(45% 38% at 26% 57%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.20) 80.39%);
+        border: 2px solid white;
+        padding: 15px 20px;
+        margin: 20px 0px;
+
+        .title-text-cs {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.casestudy-section-images {
+    .images-cs {
+        margin: 20px;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.casestudy-section-slider {
+    .container-projects {
+        display: flex;
+        align-items: center;
+        margin: 50px 0 0 0;
+        overflow: hidden;
+    }
+
+    .scroll {
+        white-space: nowrap;
+    }
+
+    .scroll div {
+        display: flex;
+    }
+
+    .scroll p {
+        font-size: 17px;
+    }
+
+    .right-to-left {
+        animation: RightToLeft 15s infinite linear;
+    }
+
+    @keyframes RightToLeft {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .casestudy-section-overview-text {
+        .text-info-cs {
+
+            .title-text-cs {
+                font-size: 40px;
+            }
+
+            .text-cs {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+}

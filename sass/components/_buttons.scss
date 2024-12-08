@@ -42,6 +42,11 @@
     cursor: pointer;
 }
 
+.view-website-button {
+    @extend .all-projects-button
+    
+}
+
 @media screen and (min-width: 768px) {
     .white-button {
         width: 95px;
