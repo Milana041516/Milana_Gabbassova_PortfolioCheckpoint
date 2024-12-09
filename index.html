@@ -11,6 +11,13 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -39,16 +46,15 @@
                         <a href="projects.html" class="nav-link">PROJECTS</a>
                     </li>
 
-                    <li class="contact-mobile nav-item">
+                    <li class="contact-scroll contact-mobile nav-item">
                         <a href="#contact" class="nav-link">CONTACT ME</a>
                     </li>
 
-                   
                 </ul>
                 </div>
 
-                <div class="contact-tablet">
-                    <a data-link="contact" class="nav-link">CONTACT ME</a>
+                <div class="contact-tablet contact-scroll">
+                    <a href="#contact" class="nav-link">CONTACT ME</a>
                 </div>
         </nav>
 
@@ -66,7 +72,8 @@
                 <p class="basic-text t-intro">I'm a front-end developer focused on building clean, responsive websites that seamlessly integrate 3D elements for enhanced interaction and visual depth. Check out my work to see how I combine coding and creativity to create engaging digital experiences.</p>
             </div>
 
-            <div class="col-span-full m-col-start-7 m-col-end-13">
+            <div class="col-span-full m-col-start-7 m-col-end-13 video-container">
+            <div class="custom-cursor play"></div>
             <video class="player" controls preload="metadata" poster="images/placeholder.jpg">
                 <source src="videos/video.mp4" type="video/mp4">
                 <p>Ooops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
@@ -79,12 +86,12 @@
             <div class="h-background-about"><img src="images/tape2.svg" alt="background-about"></div>
             <div class="col-span-full heading"><p>ABOUT ME</p></div>
 
-            <div class="facts-about col-span-full m-col-start-1 m-col-end-8">
+            <div class="facts-about col-span-full m-col-start-1 m-col-end-8 content-gsap-left">
                 <p class="big-text-about">&lt;FACTS ABOUT ME&gt;</p>
                 <p class="basic-text">I'm a <span class="purple-text">front-end enthusiast passionate</span> about building responsive, user-friendly websites with modern technologies, and I love incorporating <span class="purple-text">3D elements</span> into web projects to create visually dynamic experiences. As a recent graduate of the <span class="purple-text">Interactive Media Design program</span> at Fanshawe College, I honed my skills in web development and 3D design. When I'm not coding, I enjoy experimenting with digital art and exploring the latest design trends. I'm <span class="purple-text">always learning</span> and diving into new tools and technologies to keep my work <span class="purple-text">fresh and innovative.</span></p>
             </div>
 
-            <div class="picture-about col-span-full m-col-start-8 m-col-end-13">
+            <div class="picture-about col-span-full m-col-start-8 m-col-end-13 content-gsap-right">
                 <p class="big-text-about">&lt;MY PICTURE&gt;</p>
                 <img src="images/my-picture.png" alt="my picture">
             </div>
@@ -99,7 +106,7 @@
             <!--web dev-->
 
             <div class="col-span-full project-cards">
-            <div class="project-card">
+            <div class="project-card card-gsap">
                 <div class="project-card-image"></div>
                 <div class="project-card-tools">
                     <p class="tool">TOOL 1</p>
@@ -113,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card card-gsap">
                 <div class="project-card-image"></div>
                 <div class="project-card-tools">
                     <p class="tool">TOOL 1</p>
@@ -127,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card card-gsap">
                 <div class="project-card-image"></div>
                 <div class="project-card-tools">
                     <p class="tool">TOOL 1</p>
@@ -142,7 +149,7 @@
             </div>
         </div>
 
-            <div class="col-span-full all-projects-button">ALL PROJECTS -> </div>
+            <div class="col-span-full all-projects-button"><a href="projects.html">ALL PROJECTS -> </a></div>
 
         </section>
 
@@ -244,20 +251,20 @@
         <div class="col-span-full nav-menu-footer">
             <ul>
                 <li class="nav-item-footer">
-                    <a data-link="home" class="nav-link-footer">HOME</a>
+                    <a href="index.html" class="nav-link-footer">HOME</a>
                 </li>
                 <li class="nav-item-footer">
-                    <a data-link="about-me" class="nav-link-footer">ABOUT ME</a>
+                    <a href="about.html" class="nav-link-footer">ABOUT ME</a>
                 </li>
                 <li class="nav-item-footer">
-                    <a data-link="projects" class="nav-link-footer">PROJECTS</a>
+                    <a href="projects.html" class="nav-link-footer">PROJECTS</a>
                 </li>
             </ul>
         </div>
 
         <div class="col-span-full contact-social-footer">
 
-            <div class="button-footer black-button">CONTACT ME</div>
+            <div class="contact-scroll button-footer black-button"><a href="#contact">CONTACT ME</a></div>
 
             <div class="social-medias-footer">
                 <img src="images/instagram.svg" alt="instagram">
@@ -271,9 +278,7 @@
             <div class="col-span-full"><p class="copyright-text">© 2024 Milana Gabbassova</p></div>
      </footer>
      
-    
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="js/main.js"></script>
+   
 </body>
 
 </html>
