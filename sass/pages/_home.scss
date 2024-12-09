@@ -199,6 +199,49 @@ section {
     z-index: -1;
 }
 
+.popup-message {
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    border-radius: 15px;
+}
+
+.popup-message img {
+    width: 150px;
+}
+
+.popup-message h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 30px 0 10px;
+}
+
+.button-ok{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-ok a {
+    color: white;
+    text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
 
     .plyr-container {

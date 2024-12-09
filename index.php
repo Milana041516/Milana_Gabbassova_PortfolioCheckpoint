@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+
+require_once('includes/connect.php');
+
+$query = 'SELECT projects.id AS project, title, tools_used, project_url, details_url, url, alt_text, image_main FROM projects, media WHERE media.projects_id = projects.id LIMIT 3';
+
+$results = mysqli_query($connect, $query);
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
@@ -37,13 +46,13 @@
                 <div class="nav-menu">
                 <ul>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">HOME</a>
+                        <a href="index.php" class="nav-link">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">ABOUT ME</a>
+                        <a href="about.php" class="nav-link">ABOUT ME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="projects.html" class="nav-link">PROJECTS</a>
+                        <a href="projects.php" class="nav-link">PROJECTS</a>
                     </li>
 
                     <li class="contact-scroll contact-mobile nav-item">
@@ -106,47 +115,26 @@
             <!--web dev-->
 
             <div class="col-span-full project-cards">
-            <div class="project-card card-gsap">
-                <div class="project-card-image"><img src="images/project1.png" alt=""></div>
-                <div class="project-card-tools">
-                    <p class="tool">TOOL 1</p>
-                    <p class="tool">TOOL 2</p>
-                    <p class="tool">TOOL 3</p>
-                </div>
-                <div class="project-card-name">Project name</div>
-                <div class="project-card-buttons">
-                    <div class="white-button"><a href="#">VIEW PROJECT</a></div>
-                    <div class="black-button"><a href="#">VIEW DETAILS</a></div>
-                </div>
-            </div>
+            <?php
 
-            <div class="project-card card-gsap">
-                <div class="project-card-image"></div>
+            while($row = mysqli_fetch_array($results)) {
+                
+            
+           echo '<div class="project-card card-gsap">
+                <div class="project-card-image"><img src="images/'.$row['image_main'].'" alt="'.$row['alt_text'].'"></div>
                 <div class="project-card-tools">
-                    <p class="tool">TOOL 1</p>
-                    <p class="tool">TOOL 2</p>
-                    <p class="tool">TOOL 3</p>
+                    <p class="tool">HTML</p>
+                    <p class="tool">CSS</p>
+                    <p class="tool">JavaScript</p>
                 </div>
-                <div class="project-card-name">Project name</div>
+                <div class="project-card-name">'.$row['title'].'</div>
                 <div class="project-card-buttons">
-                    <div class="white-button">VIEW PROJECT</div>
-                    <div class="black-button">VIEW DETAILS</div>
+                    <div class="white-button"><a href="'.$row['project_url'].'">VIEW PROJECT</a></div>
+                    <div class="black-button"><a href="'.$row['details_url'].'">VIEW DETAILS</a></div>
                 </div>
-            </div>
-
-            <div class="project-card card-gsap">
-                <div class="project-card-image"></div>
-                <div class="project-card-tools">
-                    <p class="tool">TOOL 1</p>
-                    <p class="tool">TOOL 2</p>
-                    <p class="tool">TOOL 3</p>
-                </div>
-                <div class="project-card-name">Project name</div>
-                <div class="project-card-buttons">
-                    <div class="white-button">VIEW PROJECT</div>
-                    <div class="black-button">VIEW DETAILS</div>
-                </div>
-            </div>
+            </div>';
+            }
+            ?>
         </div>
 
             <div class="col-span-full all-projects-button"><a href="projects.html">ALL PROJECTS -> </a></div>
@@ -218,15 +206,16 @@
             </div>
 
         <div class="form-contact col-span-full l-col-start-6 l-col-end-13">
-            <form class="col-span-full order-form-inputs">
-                <input type="text" placeholder="First name" id="fname">
-                <input type="text" placeholder="Last name" id="lname">
-                <input type="text" placeholder="Email" id="email">
-                <textarea name="msg" placeholder="Message" id="message"></textarea>
+            <form method="post" action="sendmail.php" class="col-span-full order-form-inputs">
+                <input type="text" name="fname" placeholder="First name" id="fname">
+                <input type="text" name="lname" placeholder="Last name" id="lname">
+                <input type="text" name="email" placeholder="Email" id="email">
+                <textarea name="message" placeholder="Message" id="message"></textarea>
+                <button type="submit" class="submit-button" id="submit-action">SUBMIT</button>
             </form>
 
             <div class="col-span-full button-social">
-                <button class="submit-button" id="submit-action">SUBMIT</button>
+                
 
                 <div class="social-medias">
                     <img src="images/instagram.svg" alt="instagram">
@@ -251,13 +240,13 @@
         <div class="col-span-full nav-menu-footer">
             <ul>
                 <li class="nav-item-footer">
-                    <a href="index.html" class="nav-link-footer">HOME</a>
+                    <a href="index.php" class="nav-link-footer">HOME</a>
                 </li>
                 <li class="nav-item-footer">
-                    <a href="about.html" class="nav-link-footer">ABOUT ME</a>
+                    <a href="about.php" class="nav-link-footer">ABOUT ME</a>
                 </li>
                 <li class="nav-item-footer">
-                    <a href="projects.html" class="nav-link-footer">PROJECTS</a>
+                    <a href="projects.php" class="nav-link-footer">PROJECTS</a>
                 </li>
             </ul>
         </div>
