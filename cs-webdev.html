@@ -11,6 +11,13 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -40,7 +47,7 @@
                     </li>
 
                     <li class="contact-mobile nav-item">
-                        <a href="#contact" class="nav-link">CONTACT ME</a>
+                        <a href="index.html" class="nav-link">CONTACT ME</a>
                     </li>
 
                    
@@ -48,7 +55,7 @@
                 </div>
 
                 <div class="contact-tablet">
-                    <a data-link="contact" class="nav-link">CONTACT ME</a>
+                    <a href="index.html" class="nav-link">CONTACT ME</a>
                 </div>
         </nav>
 
@@ -81,9 +88,9 @@
         <section class="grid-con casestudy-section-images">
             <h2 class="hidden">Project Images</h2>
             <div class="images-cs col-span-full">
-            <img src="images/project-zima1.png" alt="Zima Project">
-            <img src="images/project-zima2.png" alt="Zima Project">
-            <img src="images/project-zima3.png" alt="Zima Project">
+            <img src="images/project-zima1.png" alt="Zima Project" class="card-gsap">
+            <img src="images/project-zima2.png" alt="Zima Project" class="card-gsap">
+            <img src="images/project-zima3.png" alt="Zima Project" class="card-gsap">
             </div>
 
             <div class="col-span-full view-website-button">VIEW WEBSITE</div>
@@ -230,20 +237,20 @@
         <div class="col-span-full nav-menu-footer">
             <ul>
                 <li class="nav-item-footer">
-                    <a data-link="home" class="nav-link-footer">HOME</a>
+                    <a href="index.html" class="nav-link-footer">HOME</a>
                 </li>
                 <li class="nav-item-footer">
-                    <a data-link="about-me" class="nav-link-footer">ABOUT ME</a>
+                    <a href="about.html" class="nav-link-footer">ABOUT ME</a>
                 </li>
                 <li class="nav-item-footer">
-                    <a data-link="projects" class="nav-link-footer">PROJECTS</a>
+                    <a href="projects.html" class="nav-link-footer">PROJECTS</a>
                 </li>
             </ul>
         </div>
 
         <div class="col-span-full contact-social-footer">
 
-            <div class="button-footer black-button">CONTACT ME</div>
+            <div class="button-footer black-button"><a href="index.html">CONTACT ME</a></div>
 
             <div class="social-medias-footer">
                 <img src="images/instagram.svg" alt="instagram">
@@ -257,9 +264,6 @@
             <div class="col-span-full"><p class="copyright-text">© 2024 Milana Gabbassova</p></div>
      </footer>
      
-    
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>

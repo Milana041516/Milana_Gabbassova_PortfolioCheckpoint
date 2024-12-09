@@ -25,11 +25,18 @@ section {
 :root {
     --plyr-audio-progress-buffered-background: #6933B3;
     --plyr-color-main: linear-gradient(to right, #6933B3, #4A2C89, #2A1B4D);
-    --plyr-control-icon-size: 15px;
+    --plyr-control-icon-size: 50px;
     --plyr-control-radius: 20px;
     --plyr-font-family: Helvetica, Arial, sans-serif;
     --plyr-control-spacing: 15px;
     --plyr-range-fill-background: #6933B3;
+}
+
+.plyr--video .plyr__control[data-plyr="play"] {
+    background-image: url('../images/play-video.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .section-about {
