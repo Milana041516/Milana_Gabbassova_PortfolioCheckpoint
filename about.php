@@ -40,7 +40,7 @@
                         <a href="index.php" class="nav-link">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">ABOUT ME</a>
+                        <a href="about.php" class="nav-link">ABOUT ME</a>
                     </li>
                     <li class="nav-item">
                         <a href="projects.php" class="nav-link">PROJECTS</a>
@@ -145,16 +145,16 @@
                 </div>
             </div>
 
-        <div class="form-contact col-span-full l-col-start-6 l-col-end-13">
-            <form class="col-span-full order-form-inputs">
-                <input type="text" placeholder="First name" id="fname">
-                <input type="text" placeholder="Last name" id="lname">
-                <input type="text" placeholder="Email" id="email">
-                <textarea name="msg" placeholder="Message" id="message"></textarea>
+            <div class="form-contact col-span-full l-col-start-6 l-col-end-13">
+            <form method="post" action="sendmail.php" class="col-span-full order-form-inputs">
+                <input type="text" name="fname" placeholder="First name" id="fname">
+                <input type="text" name="lname" placeholder="Last name" id="lname">
+                <input type="text" name="email" placeholder="Email" id="email">
+                <textarea name="message" placeholder="Message" id="message"></textarea>
+                <button type="submit" class="submit-button" id="submit-action">SUBMIT</button>
             </form>
 
             <div class="col-span-full button-social">
-                <button class="submit-button" id="submit-action">SUBMIT</button>
 
                 <div class="social-medias">
                     <img src="images/instagram.svg" alt="instagram">
@@ -182,7 +182,7 @@
                     <a href="index.php" class="nav-link-footer">HOME</a>
                 </li>
                 <li class="nav-item-footer">
-                    <a href="about.html" class="nav-link-footer">ABOUT ME</a>
+                    <a href="about.php" class="nav-link-footer">ABOUT ME</a>
                 </li>
                 <li class="nav-item-footer">
                     <a href="projects.php" class="nav-link-footer">PROJECTS</a>

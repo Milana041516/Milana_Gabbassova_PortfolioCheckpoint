@@ -124,7 +124,7 @@ gsap.from('.projects-project div', {
     trigger: '.projects-project div',
     start: "top 80%",
     end: "bottom top",
-    toggleActions: "restart reverse restart reverse"
+    toggleActions: "play none none none"
   }
 });
 
@@ -222,6 +222,7 @@ gsap.from('.info-why-frontend', {
   }
 });
 
+
 gsap.from('.info-skills', {
   opacity: 0,
   y: 100, 
@@ -235,6 +236,19 @@ gsap.from('.info-skills', {
   }
 });
 
+//case-study text appearing
+gsap.from('.text-info-cs', {
+  opacity: 0,
+  y: 100, 
+  duration: 1,
+  scrollTrigger: {
+    trigger: '.text-info-cs',
+    start: "top 65%",
+    end: "bottom top",
+    toggleActions: "play none none reverse",
+    markers: false
+  }
+});
 
 
 //scroll to link 
