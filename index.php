@@ -5,7 +5,7 @@
 
 require_once('includes/connect.php');
 
-$query = 'SELECT projects.id AS project, title, tools_used, project_url, details_url, url, alt_text, image_main FROM projects, media WHERE media.projects_id = projects.id LIMIT 3';
+$query = 'SELECT projects.id AS project, title, tools_used, project_url, url, alt_text, image_main FROM projects, media WHERE media.projects_id = projects.id LIMIT 3';
 
 $results = mysqli_query($connect, $query);
 ?>
@@ -130,14 +130,14 @@ $results = mysqli_query($connect, $query);
                 <div class="project-card-name">'.$row['title'].'</div>
                 <div class="project-card-buttons">
                     <div class="white-button"><a href="'.$row['project_url'].'">VIEW PROJECT</a></div>
-                    <div class="black-button"><a href="'.$row['details_url'].'">VIEW DETAILS</a></div>
+                    <div class="black-button"><a href="cs-webdev.php?id='.$row['project'].'">VIEW DETAILS</a></div>
                 </div>
             </div>';
             }
             ?>
         </div>
 
-            <div class="col-span-full all-projects-button"><a href="projects.html">ALL PROJECTS -> </a></div>
+            <div class="col-span-full all-projects-button"><a href="projects.php">ALL PROJECTS -> </a></div>
 
         </section>
 

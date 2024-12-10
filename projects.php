@@ -3,11 +3,11 @@
     <?php
     require_once('includes/connect.php');
 
-    $query1 = 'SELECT projects.id AS project, title, tools_used, project_url, details_url, url, alt_text, image_main, overview FROM projects, media WHERE media.projects_id = projects.id AND projects.categories_id = 1';
+    $query1 = 'SELECT projects.id AS project, title, tools_used, project_url, url, alt_text, image_main, overview FROM projects, media WHERE media.projects_id = projects.id AND projects.categories_id = 1';
 
     $result1 = mysqli_query($connect,$query1);
 
-    $query2 = 'SELECT projects.id AS project, title, tools_used, project_url, details_url, url, alt_text, image_main, overview FROM projects, media WHERE media.projects_id = projects.id AND projects.categories_id = 2';
+    $query2 = 'SELECT projects.id AS project, title, tools_used, project_url, url, alt_text, image_main, overview FROM projects, media WHERE media.projects_id = projects.id AND projects.categories_id = 2';
 
     $result2 = mysqli_query($connect,$query2);
 

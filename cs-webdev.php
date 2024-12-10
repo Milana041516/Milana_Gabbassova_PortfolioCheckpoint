@@ -7,7 +7,7 @@ $query1 = 'SELECT projects.id AS project, title, overview, role, process, challe
 $result1 = mysqli_query($connect, $query1);
 $row1 = mysqli_fetch_assoc($result1);
 
-$query2 = 'SELECT projects.id AS project, title, tools_used, project_url, details_url, url, alt_text, image_main, overview, categories_id FROM projects, media, categories WHERE media.projects_id = projects.id AND projects.categories_id = categories.id';
+$query2 = 'SELECT projects.id AS project, title, tools_used, project_url, url, alt_text, image_main, overview, categories_id FROM projects, media, categories WHERE media.projects_id = projects.id AND projects.categories_id = categories.id';
 $result2 = mysqli_query($connect, $query2);
 
 $projects = [];
