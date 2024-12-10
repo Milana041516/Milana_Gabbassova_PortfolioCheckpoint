@@ -35,7 +35,7 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script defer src="js/main.js"></script>
+    <script type="module" defer src="js/main.js"></script>
 </head>
 
 <body>

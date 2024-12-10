@@ -13,7 +13,7 @@
             <img src="images/tick.svg" alt="tick">
             <h2>Thank You!</h2>
             <p>Your details has been successfully submitted. Thanks!</p>
-            <div class="button-ok"><a href="contact.php">OK</a></div>
+            <div class="button-ok"><a href="index.php">OK</a></div>
     </main>
     <footer></footer>
 </body>
