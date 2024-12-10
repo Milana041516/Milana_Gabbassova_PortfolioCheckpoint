@@ -115,6 +115,10 @@ section {
     padding: 20px;
     margin-top: 50px;
 
+    form {
+        position: relative;
+    }
+
     .h-background-contact {
         position: absolute;
         top: -40px;
@@ -163,6 +167,12 @@ section {
     .button-social {
         display: flex;
         justify-content: space-between;
+    }
+
+    .social-medias {
+        position: absolute;
+        bottom: 20px;
+        right: 0px;
     }
 
     .social-medias img {
