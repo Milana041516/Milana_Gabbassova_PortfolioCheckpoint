@@ -151,7 +151,7 @@ $image_array = explode(',',$row1['images']);
                         <div class="project-card-name">'.$row2['title'].'</div>
                         <div class="project-card-buttons">
                             <div class="white-button"><a href="'.$row2['project_url'].'">VIEW PROJECT</a></div>
-                            <div class="black-button"><a href="href="cs-webdev.php?id='.$row2['project'].'">VIEW DETAILS</a></div>
+                            <div class="black-button"><a href="cs-webdev.php?id='.$row2['project'].'">VIEW DETAILS</a></div>
                         </div>
                     </div>';
                     } elseif ($row2['categories_id'] == 2) {
